@@ -47,7 +47,7 @@ public class Movement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Cheese") && !collision.gameObject.CompareTag("Attack"))
+        if (collision.CompareTag("Cheese"))
         {
             hurt.Play();
             Debug.Log("hit");
@@ -81,6 +81,7 @@ public class Movement : MonoBehaviour
     {
         att.Play();
         attackgame.SetActive(true);
+        attackgame.transform.position = transform.position;
         yield return new WaitForSeconds(0.25f);
         attackgame.SetActive(false);
     }
