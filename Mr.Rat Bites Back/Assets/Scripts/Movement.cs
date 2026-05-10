@@ -23,6 +23,9 @@ public class Movement : MonoBehaviour
     public CircleCollider2D attackgame1;
     public static int deathtype = 1;
 
+    public AudioSource att;
+    public AudioSource hurt;
+
     // Update is called once per frame
     void Update()
     {
@@ -46,6 +49,7 @@ public class Movement : MonoBehaviour
     {
         if (collision.CompareTag("Cheese") && !collision.gameObject.CompareTag("Attack"))
         {
+            hurt.Play();
             Debug.Log("hit");
             health = health - 1;
             if (health == 2)
@@ -75,6 +79,7 @@ public class Movement : MonoBehaviour
         }
     IEnumerator attack()
     {
+        att.Play();
         attackgame.SetActive(true);
         yield return new WaitForSeconds(0.25f);
         attackgame.SetActive(false);
