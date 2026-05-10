@@ -13,6 +13,7 @@ public class Movement : MonoBehaviour
 
     Vector2 movement;
 
+    //HEALTH UI
     public GameObject health3;
     public GameObject health2;
     public GameObject health1;
@@ -29,12 +30,13 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //MOVEMENT
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            //Attack
+            //ATTACK
             StartCoroutine(attack());
 
         }
@@ -43,11 +45,12 @@ public class Movement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
-        attackgame.transform.position = transform.position;
+        attackgame.transform.position = transform.position; // LINK THE RAT MOVEMENT TO THE ATTACK CIRCLE
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //DEPLETE HEART FOR EACH CHEESE THEN DEATH WHEN NO MORE HEARTS
         if (collision.CompareTag("Cheese"))
         {
             hurt.Play();
@@ -67,18 +70,18 @@ public class Movement : MonoBehaviour
                 health1.SetActive(false);
 
                 //DEATH SCREEN
-                StaticData.deathtype = 1;
+                StaticData.deathtype = 1;// CHANGE DEATH STAGE TO CHEESE EAT
                 SceneManager.LoadScene("Death");
             }
         }
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player"))// IF PLAYERS HIT EACHOTHER DEATH
         {
             Debug.Log("attackDeath");
-            StaticData.deathtype = 2;
+            StaticData.deathtype = 2;// CHANGE DEATH STAGE TO REG MOUSE
             SceneManager.LoadScene("Death");
         }
         }
-    IEnumerator attack()
+    IEnumerator attack()// SHOW ATTACK
     {
         att.Play();
         attackgame.SetActive(true);

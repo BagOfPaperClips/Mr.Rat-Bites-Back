@@ -8,7 +8,7 @@ public class DeathInfo : MonoBehaviour
     public GameObject mouseDeath;
     private void Update()
     {
-
+        //OPEN ALT DEATH STAGE DEPENDING ON DEATH TYPE
         if(StaticData.deathtype == 1)
         {
             mouseDeath.SetActive(false);

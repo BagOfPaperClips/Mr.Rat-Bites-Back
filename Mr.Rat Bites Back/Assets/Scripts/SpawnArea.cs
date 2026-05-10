@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class SpawnArea : MonoBehaviour
 {
+    //ENEMIES
     public GameObject cheese1;
     public GameObject cheese2;
     public GameObject cheese3;
@@ -13,7 +14,7 @@ public class SpawnArea : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        //WHEN THE PLAYER GOES WITHIN REALEASE THE CHEESE
         if (collision.CompareTag("Player"))
         {
                 cheese1.SetActive(true);
