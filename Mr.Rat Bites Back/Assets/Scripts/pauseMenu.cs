@@ -19,7 +19,7 @@ public class pauseMenu : MonoBehaviour
     {
         if (counter == 0 && Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("Hello!?");
+            //Debug.Log("Hello!?");
             
             gamePause.SetActive(true);
             Time.timeScale = 0;
@@ -27,7 +27,7 @@ public class pauseMenu : MonoBehaviour
         }
         if(counter==1 && Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("Bye!!");
+            //Debug.Log("Bye!!");
             gamePause.SetActive(false);
             Time.timeScale = 1;
             StartCoroutine(back());
@@ -36,7 +36,7 @@ public class pauseMenu : MonoBehaviour
     }
     IEnumerator back()
     {
-        Debug.Log(counter);
+        //Debug.Log(counter);
         yield return new WaitForSecondsRealtime(0.1f);
         if (counter == 1)
             counter = 0;

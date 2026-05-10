@@ -14,7 +14,7 @@ public class enemyAI : MonoBehaviour
     private void Awake()
     {
         rand = Random.Range(1,3);
-        Debug.Log(rand);
+        //Debug.Log(rand);
     }
     
     private void FixedUpdate()
@@ -33,6 +33,12 @@ public class enemyAI : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
+        {
+            cd = gameObject.GetComponent<CapsuleCollider2D>();
+            cd.enabled = false;
+            Destroy(gameObject, 0.1f);
+        }
+        else if (collision.CompareTag("Attack"))
         {
             cd = gameObject.GetComponent<CapsuleCollider2D>();
             cd.enabled = false;

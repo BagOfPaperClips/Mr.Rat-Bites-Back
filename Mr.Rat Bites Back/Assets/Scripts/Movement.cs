@@ -44,8 +44,9 @@ public class Movement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Cheese") && !collision.gameObject.name.Equals("attack1"))
+        if (collision.CompareTag("Cheese") && !collision.gameObject.CompareTag("Attack"))
         {
+            Debug.Log("hit");
             health = health - 1;
             if (health == 2)
             {
