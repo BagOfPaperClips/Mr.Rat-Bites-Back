@@ -43,6 +43,7 @@ public class Movement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+        attackgame.transform.position = transform.position;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -81,7 +82,7 @@ public class Movement : MonoBehaviour
     {
         att.Play();
         attackgame.SetActive(true);
-        attackgame.transform.position = transform.position;
+        
         yield return new WaitForSeconds(0.25f);
         attackgame.SetActive(false);
     }
