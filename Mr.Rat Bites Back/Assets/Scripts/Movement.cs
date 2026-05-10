@@ -70,13 +70,13 @@ public class Movement : MonoBehaviour
                 StaticData.deathtype = 1;
                 SceneManager.LoadScene("Death");
             }
-        }/*
-        if (collision.CompareTag("Player") && collision.gameObject.name != "attack1")
+        }
+        if (collision.CompareTag("Player"))
         {
             Debug.Log("attackDeath");
             StaticData.deathtype = 2;
             SceneManager.LoadScene("Death");
-        }*/
+        }
         }
     IEnumerator attack()
     {

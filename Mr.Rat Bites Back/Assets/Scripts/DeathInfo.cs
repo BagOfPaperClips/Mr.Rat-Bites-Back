@@ -11,11 +11,11 @@ public class DeathInfo : MonoBehaviour
 
         if(StaticData.deathtype == 1)
         {
-            //mouseDeath.SetActive(false);
+            mouseDeath.SetActive(false);
         }
         if (StaticData.deathtype == 2)
         {
-            //mouseDeath.SetActive(true);
+            mouseDeath.SetActive(true);
         }
     }
 }

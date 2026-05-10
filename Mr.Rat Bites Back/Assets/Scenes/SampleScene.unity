@@ -858,7 +858,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.37, y: 2.75}
+  m_Size: {x: 0.95, y: 1.98}
   m_Direction: 0
 --- !u!4 &235311533
 Transform:
@@ -909,7 +909,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1}
+  m_Size: {x: 1.4, y: 2.44}
   m_Direction: 0
 --- !u!1 &248611928
 GameObject:
@@ -3833,7 +3833,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &781480460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9549,7 +9549,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.37, y: 2.75}
+  m_Size: {x: 1.01, y: 1.99}
   m_Direction: 0
 --- !u!4 &1675016418
 Transform:
@@ -9601,7 +9601,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1}
+  m_Size: {x: 1.56, y: 2.28}
   m_Direction: 0
 --- !u!1 &1701570588
 GameObject:
