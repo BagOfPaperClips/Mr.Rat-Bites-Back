@@ -1,10 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.Burst.CompilerServices;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static UnityEditor.LightingExplorerTableColumn;
 
 public class Movement : MonoBehaviour
 {
@@ -34,6 +30,11 @@ public class Movement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
+        if(movement.y== 1)
+        {
+
+        }
+        //else if(movem)
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //ATTACK
@@ -46,6 +47,7 @@ public class Movement : MonoBehaviour
     {
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
         attackgame.transform.position = transform.position; // LINK THE RAT MOVEMENT TO THE ATTACK CIRCLE
+       
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
