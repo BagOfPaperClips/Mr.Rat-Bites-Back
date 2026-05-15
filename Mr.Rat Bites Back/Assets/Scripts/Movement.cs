@@ -23,6 +23,7 @@ public class Movement : MonoBehaviour
     public AudioSource att;
     public AudioSource hurt;
 
+
     // Update is called once per frame
     void Update()
     {
@@ -30,11 +31,13 @@ public class Movement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        if(movement.y== 1)
-        {
+        Vector3 direction = new Vector3(movement.x, movement.y, 0 );
 
-        }
-        //else if(movem)
+        float targetAngle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;
+        rb.transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
+
+
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //ATTACK
