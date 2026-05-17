@@ -33,8 +33,8 @@ public class Movement : MonoBehaviour
 
         Vector3 direction = new Vector3(movement.x, movement.y, 0 );
 
-        float targetAngle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;
-        rb.transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
+        // float targetAngle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;
+        // rb.transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
 
 
 
